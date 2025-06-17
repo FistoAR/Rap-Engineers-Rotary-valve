@@ -9965,6 +9965,10 @@ td strong {
   width: 100%;
 }
 
+.img-container div{
+  width: 50%;
+}
+
 .img-container img {
   width: 70%;
   height: auto;
