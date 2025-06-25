@@ -1417,6 +1417,11 @@ ul.title3 li {
   margin-left: 10%;
 }
 
+ul.title3 li {
+  position: relative;
+  list-style-type: none;
+}
+
 ul.title3 li::before {
   content: "";
   background: url("./images/arrow-right_15100183.png") no-repeat center center;
@@ -1427,9 +1432,17 @@ ul.title3 li::before {
   left: -1%;
   top: 49%;
   transform: translateY(-50%);
-  gap: 10px;
-  list-style-type: none;
+  animation: shakeX 1s infinite linear;
 }
+
+@keyframes shakeX {
+  0% { transform: translateY(-60%) translateX(0); }
+  25% { transform: translateY(-60%) translateX(3px); }
+  50% { transform: translateY(-60%) translateX(0); }
+  75% { transform: translateY(-60%) translateX(-8px); }
+  100% { transform: translateY(-60%) translateX(10px); }
+}
+
 
 .role-container1 {
   text-align: center;
@@ -2083,9 +2096,8 @@ ul.title3 li::before {
 
 /* Style for each part */
 .part-one,
-.part-one1,
 .part-two {
-  width: 33%;
+  width: 50%;
   /* Makes both parts equal in size */
   display: flex;
   flex-direction: column;
@@ -2119,7 +2131,7 @@ ul.title3 li::before {
 /* Styling for text under each image */
 .part-one .text,
 .part-two .text,
-.part-one1 .text{
+.part-one1 .text {
   text-align: center;
   font-size: 24px;
   color: #000;
@@ -7214,7 +7226,7 @@ ul.title3 li::before {
 }
 
 .ventingrotary {
-  width: 65%;
+  width: 90%;
   text-align: left;
   /* margin-top: 3%; */
 }
@@ -7261,6 +7273,16 @@ ul.title31 li::before {
   transform: translateY(-50%);
   gap: 10px;
   list-style-type: none;
+    transform: translateY(-50%);
+  animation: shakeX 1s infinite linear;
+}
+
+@keyframes shakeX {
+  0% { transform: translateY(-60%) translateX(0); }
+  25% { transform: translateY(-10%) translateX(3px); }
+  50% { transform: translateY(-60%) translateX(0); }
+  75% { transform: translateY(-50%) translateX(-8px); }
+  100% { transform: translateY(-60%) translateX(10px); }
 }
 
 /* ---------------------------     Page 28    ------------------------ */
@@ -9055,9 +9077,9 @@ button {
     font-size: 17px !important;
   }
 
-  .about-image .panda {
+  /* .about-image .panda {
     margin-top: -19px !important;
-  }
+  } */
 
   .about-image img {
     margin-top: 69px !important;
@@ -9134,7 +9156,7 @@ button {
 .comparison-heading {
   font-size: 1.2rem;
   /* margin-bottom: 1rem; */
-  color: #222;
+  color: #000000;
   /* border-bottom: 3px solid #007bff; */
   display: inline-block;
   padding-bottom: 0.5rem;
@@ -9152,30 +9174,33 @@ button {
 table {
   width: 80%;
   border-collapse: collapse;
-  background-color: #fefefe;
+  /* background-color: #fefefe; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 thead {
-  background-color: #007bff;
-  color: #fff;
+  /* background-color: #007bff; */
+  color: #000000;
+ 
 }
 
 .responsive-table th,
 .responsive-table td {
   padding: 10px;
   text-align: left;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   font-size: 14px;
+  
+}
+
+.responsive-table th{
+ text-align: center;
 }
 
 td strong {
-  color: #333;
+  color: #030303e7;
 }
 
-.responsive-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
 
 @media screen and (max-width: 768px) {
   table {
@@ -9242,7 +9267,7 @@ td strong {
   .responsive-table td {
     padding: 4px !important;
     text-align: left;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     font-size: 12px !important;
   }
 
@@ -9965,7 +9990,7 @@ td strong {
   width: 100%;
 }
 
-.img-container div{
+.img-container div {
   width: 50%;
 }
 
@@ -10038,7 +10063,7 @@ td strong {
 
 .page55-container {
   width: 100%;
-  height: 90%;
+  height: 71%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10064,7 +10089,7 @@ td strong {
 .page55-swiper {
   width: 100%;
   /* height: 300px; */
-  height: 75%;
+  height: 100%;
 }
 
 .page55-swiper .swiper-slide {
@@ -10263,7 +10288,7 @@ td strong {
 }
 
 .swiper-container7 .swiper-slide .swiper-content .image img {
-  max-width: 70%;
+  max-width: 97%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -10295,7 +10320,16 @@ td strong {
   margin-left: 20px;
   font-size: 14px;
 }
+@media screen and ( max-width:1600px ) {
+  .swiper-container7 .swiper-slide .swiper-content .image img {
+  max-width: 78%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 10%;
+}
 
+}
 /* Responsive Styles for Screens ≤ 1024px */
 @media (max-width: 1024px) {
 
@@ -10807,18 +10841,74 @@ td strong {
   width: 100%;
   height: 90%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.model3d img {
-  width: 70%;
-  height: auto;
+.model3d .model {
+  width: 100%;
+  height: 80%;
+}
+
+.model model-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.model3d .action-btns {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  column-gap: 5%;
+}
+
+.model3d .action-btns button {
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color: #6b6b6b75;
+  color: black;
+  min-width: 7%;
+  font-weight: bold;
+  font-size: 0.9vw;
+  cursor: pointer;
+}
+
+.model3d .action-btns .active-explode {
+  background-color: #00aaff;
+  color: white;
+  border: 1.5px solid white;
+}
+
+.model3d .label-content {
+  text-align: center;
+  width: 25%;
+  transition: all 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.979);
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.233);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.37);
+  text-align: justify;
+  padding: 1%;
+  position: absolute;
+  right: 1%;
+  top: -12%;
+  font-size: 1vw;
+}
+
+.label-content.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .ar-button slot {
   display: none !important;
 }
+
+
 
 /* .swiperpage44 {
   margin-top: -5%;
@@ -10941,16 +11031,45 @@ td strong {
   border-collapse: collapse;
   text-align: left;
   font-size: 14px;
-  background-color: #fff;
-  border: 2px solid rgb(188, 228, 233);
+  background-color: #ffffff2a;
+  border: 2px solid rgb(0, 7, 8);
 }
 
 .rotary-valve-table th,
 .rotary-valve-table td {
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   padding: 8px 10px;
   vertical-align: top;
   color: #000;
+}
+
+.rotary-valve-table::-webkit-scrollbar {
+  width: 9px;
+  height:100px;
+}
+
+.rotary-valve-table::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.rotary-valve-table::-webkit-scrollbar-thumb {
+  background: #00aaff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00aaff;
+  animation: glowScroll 2s infinite linear;
+}
+
+@keyframes glowScroll {
+  0% {
+    box-shadow: 0 0 5px #00aaff;
+  }
+  50% {
+    box-shadow: 0 0 15px #00aaff;
+  }
+  100% {
+    box-shadow: 0 0 5px #00aaff;
+  }
 }
 
 .rotary-valve-table thead {
@@ -12053,10 +12172,41 @@ td strong {
 }
 
 .DTRotaryolve .swiper-slide .page44leftcon {
-  max-height: 350px;
+  max-height: 370px;
   overflow-y: auto;
   padding-right: 3%;
+  scroll-behavior: smooth;
 }
+
+.DTRotaryolve .swiper-slide .page44leftcon::-webkit-scrollbar {
+  width: 9px;
+}
+
+.DTRotaryolve .swiper-slide .page44leftcon::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.DTRotaryolve .swiper-slide .page44leftcon::-webkit-scrollbar-thumb {
+  background: #00aaff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00aaff;
+  animation: glowScroll 2s infinite linear;
+}
+
+@keyframes glowScroll {
+  0% {
+    box-shadow: 0 0 5px #00aaff;
+  }
+  50% {
+    box-shadow: 0 0 15px #00aaff;
+  }
+  100% {
+    box-shadow: 0 0 5px #00aaff;
+  }
+}
+
+
 
 .transparent-table {
   border-collapse: collapse;
@@ -12086,7 +12236,7 @@ td strong {
   border-radius: 15px;
   line-height: 1.6;
   color: #080000;
-    font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .valve-guide h2 {
@@ -12106,7 +12256,7 @@ td strong {
   margin-bottom: 6px;
 }
 
-.valve-guide .examples{
+.valve-guide .examples {
   background: transparent;
   padding: 15px;
   margin-top: 15px;
@@ -12146,7 +12296,7 @@ td strong {
 .tips {
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
   margin-top: 15px;
 }
