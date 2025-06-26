@@ -894,7 +894,6 @@
     justify-content: center;
     gap: 10rem;
     width: 100%;
-    max-width: 1200px;
     padding: 0 1rem;
     /* margin: auto; */
     text-align: center;
@@ -904,7 +903,7 @@
   .venting-images img {
     width: auto;
     max-width: 60%;
-    max-height: 300px;
+    max-height:auto;
     object-fit: contain;
     border-radius: 12px;
     margin: auto;
