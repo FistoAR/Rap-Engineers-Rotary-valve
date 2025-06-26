@@ -2774,11 +2774,9 @@
           </div>
           <div class="model3d">
             <div class="model">
-              <model-viewer id="rotaryModel" src="model1explodeNew.gltf" camera-controls disable-ar
-                ar-modes="webxr scene-viewer quick-look" tone-mapping="neutral" poster="poster.webp"
-                shadow-intensity="1" exposure="1" disable-tap disable-pan camera-orbit="530.3deg 91.16deg 2.577m"
-                field-of-view="26.26deg" field-of-view="30deg">
-
+              <model-viewer src="./images/2.gltf" disable-ar camera-controls tone-mapping="neutral" poster="poster.webp"
+                shadow-intensity="1" camera-orbit="156.7deg 82.86deg 19.99m" field-of-view="30deg" field-of-view="30deg"
+                min-camera-orbit="auto 78deg auto" max-camera-orbit="auto 78deg auto" environment-image disable-tap>
                 <button class="Hotspot" slot="hotspot-2" data-surface="0 0 186 183 184 0.126 0.281 0.593"
                   data-visibility-attribute="visible">
                   <!-- <div class="HotspotAnnotation">Housing</div> -->
@@ -2798,21 +2796,20 @@
                   data-visibility-attribute="visible">
                   <!-- <div class="HotspotAnnotation">Rotor</div> -->
                 </button>
-                <div class="progress-bar hide" slot="progress-bar">
-                  <div class="update-bar"></div>
-                </div>
+                <!-- <div class="progress-bar hide" slot="progress-bar">
+                          <div class="update-bar"></div>
+                        </div> -->
 
-                <button slot="ar-button" id="ar-button">
-                  View in your space
-                </button>
+                <!-- <button slot="ar-button" id="ar-button">
+                          View in your space
+                        </button> -->
               </model-viewer>
-
 
             </div>
 
             <div class="label-content" style="display: none;">
               <h3 id="hotspotTitle"></h3>
-              <img  src="./images/delete (1).png" alt="" id="close-btn"
+              <img src="./images/delete (1).png" alt="" id="close-btn"
                 style="position: absolute; top: 6%; right: 4%; width: 1.8vw; height: auto; cursor: pointer;">
               <p id="hotspotDescription"></p>
             </div>
@@ -4650,7 +4647,8 @@
               <li>Should the blades be chamfered, hardened, flexible, scrapers, etc.?</li>
               <li>What type of drive? (chain, direct, right-angled drive, etc.)</li>
               <li>Does the valve need to be explosion-proof or USDA approved?</li>
-              <li>Any specific requirements? (vent adaptor, zero speed sensor, safety switch, air injection, CSR, etc.)
+              <li>Any specific requirements? (vent adaptor, zero speed sensor, safety switch, air injection, CSR,
+                etc.)
               </li>
             </ul>
 
@@ -4659,7 +4657,8 @@
               <ol type="1">
                 <li>
                   For handling abrasive products, Drop Thru types are recommended.<br>
-                  <strong>Limitations : </strong> For <strong> pneumatic conveying applications </strong>, the <strong>
+                  <strong>Limitations : </strong> For <strong> pneumatic conveying applications </strong>, the
+                  <strong>
                     DT
                     model must be used in
                     combination with a drop-out box.</strong> This setup requires <strong> additional vertical space
@@ -4667,7 +4666,8 @@
                   its increased overall height.
                 </li>
                 <li>For handling sticky products in pneumatic conveying, Blow Thru types are recommended.</li>
-                <li>For handling low bulk density products, DVT, DST, and BVT models are recommended for better filling
+                <li>For handling low bulk density products, DVT, DST, and BVT models are recommended for better
+                  filling
                   rate.</li>
                 <li>
                   Depending on the abrasiveness the following executions are recommended:
@@ -6605,12 +6605,12 @@
   <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   <script src="./swiper-bundle.min.js"></script>
- 
+
   <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js  "></script> -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-   <script src="./script.js"></script>
+  <script src="./script.js"></script>
 
   <!-- ***************************** Page 5  ************************************* -->
 </body>
