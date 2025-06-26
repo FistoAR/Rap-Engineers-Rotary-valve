@@ -657,7 +657,7 @@ function removePressureAnimation1() {
 function addRotaryValveAnimation() {
   const header = document.querySelector('.anima33');
   const row = document.querySelector('.row');
-
+  const lists = document.querySelectorAll('.row .stagger-list li');
   if (header) {
     header.classList.remove('animate-from-left');
     void header.offsetWidth;
@@ -669,7 +669,21 @@ function addRotaryValveAnimation() {
     void row.offsetWidth;
     row.classList.add('animate-from-left');
   }
+
+  lists.forEach((item) => {
+    item.classList.remove('fade-in-up');
+  });
+
+  lists.forEach((item, index) => {
+  setTimeout(() => {
+    item.classList.add('fade-in-up');
+  }, 200 * index); 
+  });
+
 }
+
+
+
 
 function removeRotaryValveAnimation() {
   const header = document.querySelector('.anima33');
@@ -847,7 +861,7 @@ const swipers = new Swiper('.swiper-container1', {
   spaceBetween: 0,
   mousewheel: true,
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
@@ -883,7 +897,7 @@ const swiper1 = new Swiper('.venting-swiper', {
     clickable: true,
   },
   autoplay: {
-    delay: 2500,
+    delay: 4000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   }
@@ -900,7 +914,7 @@ const swiper3 = new Swiper('.venting-swiper2', {
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   }, on: {
@@ -927,7 +941,7 @@ const swiper4 = new Swiper('.venting-swiper3', {
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   }, on: {
@@ -953,7 +967,7 @@ const swiper5 = new Swiper('.venting-swiper4', {
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
@@ -988,7 +1002,7 @@ const swiper6 = new Swiper('.page55-swiper', {
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   }, on: {
@@ -1014,7 +1028,7 @@ const swiper7 = new Swiper('.swiper-container7', {
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
@@ -1074,7 +1088,7 @@ const swiper8 = new Swiper('.venting-swiper5', {
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   }, on: {

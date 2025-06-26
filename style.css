@@ -1436,11 +1436,9 @@ ul.title3 li::before {
 }
 
 @keyframes shakeX {
-  0% { transform: translateY(-60%) translateX(0); }
-  25% { transform: translateY(-60%) translateX(3px); }
-  50% { transform: translateY(-60%) translateX(0); }
-  75% { transform: translateY(-60%) translateX(-8px); }
-  100% { transform: translateY(-60%) translateX(10px); }
+  0% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(-10px); }
+  100% { transform: translateY(-50%) translateX(0); }
 }
 
 
@@ -7258,7 +7256,6 @@ ul.title31 {
 ul.title31 li {
   position: relative;
   padding-left: 30px;
-  /* Space for the icon */
 }
 
 ul.title31 li::before {
@@ -7273,17 +7270,31 @@ ul.title31 li::before {
   transform: translateY(-50%);
   gap: 10px;
   list-style-type: none;
-    transform: translateY(-50%);
-  animation: shakeX 1s infinite linear;
+  transform: translateY(-50%);
+  animation: shakeX 4s infinite linear;
 }
 
 @keyframes shakeX {
-  0% { transform: translateY(-60%) translateX(0); }
-  25% { transform: translateY(-10%) translateX(3px); }
-  50% { transform: translateY(-60%) translateX(0); }
-  75% { transform: translateY(-50%) translateX(-8px); }
-  100% { transform: translateY(-60%) translateX(10px); }
+  0% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(-10px); }
+  100% { transform: translateY(-50%) translateX(0); }
 }
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-list li {
+  opacity: 0;
+}
+
 
 /* ---------------------------     Page 28    ------------------------ */
 
@@ -12180,29 +12191,30 @@ td strong {
 
 .DTRotaryolve .swiper-slide .page44leftcon::-webkit-scrollbar {
   width: 9px;
+  
 }
 
 .DTRotaryolve .swiper-slide .page44leftcon::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0700003d;
   border-radius: 10px;
 }
 
 .DTRotaryolve .swiper-slide .page44leftcon::-webkit-scrollbar-thumb {
-  background: #00aaff;
+  background: #1c2c77;
   border-radius: 10px;
-  box-shadow: 0 0 10px #00aaff;
+  box-shadow: 0 0 10px #4c72db;
   animation: glowScroll 2s infinite linear;
 }
 
 @keyframes glowScroll {
   0% {
-    box-shadow: 0 0 5px #00aaff;
+    box-shadow: 0 0 5px #4c72db;
   }
   50% {
-    box-shadow: 0 0 15px #00aaff;
+    box-shadow: 0 0 15px #4c72db;
   }
   100% {
-    box-shadow: 0 0 5px #00aaff;
+    box-shadow: 0 0 5px #4c72db;
   }
 }
 
