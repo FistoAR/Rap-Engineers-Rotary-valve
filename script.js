@@ -370,12 +370,15 @@ function updatePageNumber() {
 
   const bgAudio = document.getElementById('bg-audio');
   const machineVideo = document.getElementById('autoPlayVideo');
-
+const machineVideo1 = document.getElementById('autoPlayVideo1');
   if (currentSlide + 1 === 38) {
     setTimeout(() => {
       machineVideo.currentTime = 0;
       machineVideo.muted = false;
       machineVideo.play();
+      machineVideo1.currentTime = 0;
+      machineVideo1.muted = false;
+      machineVideo1.play();
       bgAudio.pause();
     }, 2000);
   } else {
