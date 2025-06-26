@@ -921,7 +921,7 @@
   margin-left: 20%;
 }
 
-  .venting-imagess >:first-child{
+  /* .venting-imagess >:first-child{
     width: 40%;
   }
   .venting-imagess > :nth-child(2){
@@ -941,7 +941,7 @@
     margin-bottom: 1% !important;
     font-weight: unset !important;
 }
-  
+   */
   
   @media(min-width: 768px) and (max-width:1900px) {
     .venting-images {
