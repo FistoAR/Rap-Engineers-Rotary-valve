@@ -370,8 +370,7 @@ function updatePageNumber() {
 
   const bgAudio = document.getElementById('bg-audio');
   const machineVideo = document.getElementById('autoPlayVideo');
-  const machineVideo1 = document.getElementById('autoPlayVideo1');
-  const machineVideo2 = document.getElementById('autoPlayVideo2');
+const machineVideo1 = document.getElementById('autoPlayVideo1');
   if (currentSlide + 1 === 38) {
     setTimeout(() => {
       machineVideo.currentTime = 0;
@@ -380,9 +379,6 @@ function updatePageNumber() {
       machineVideo1.currentTime = 0;
       machineVideo1.muted = false;
       machineVideo1.play();
-      machineVideo2.currentTime = 0;
-      machineVideo2.muted = false;
-      machineVideo2.play();
       bgAudio.pause();
     }, 2000);
   } else {
@@ -391,8 +387,6 @@ function updatePageNumber() {
       machineVideo.muted = true;
       machineVideo1.pause();
       machineVideo1.muted = true;
-      machineVideo2.pause();
-      machineVideo2.muted = true;
       bgAudio.play();
     }, 2000);
   }
@@ -686,9 +680,9 @@ function addRotaryValveAnimation() {
   });
 
   lists.forEach((item, index) => {
-    setTimeout(() => {
-      item.classList.add('fade-in-up');
-    }, 200 * index);
+  setTimeout(() => {
+    item.classList.add('fade-in-up');
+  }, 200 * index); 
   });
 
 }

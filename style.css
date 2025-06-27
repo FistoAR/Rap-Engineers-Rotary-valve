@@ -2065,7 +2065,7 @@ ul.title3 li::before {
   max-width: 1100px;
 }
 
-.general-illustration div{
+/* .general-illustration div{
   width: 33% !important;
   height: 100% !important;
   display: flex;
@@ -2076,7 +2076,7 @@ ul.title3 li::before {
 .general-illustration div > img{
  width: 100% !important;
  height: auto !important;
-}
+} */
 
 
 /* ----------------------------  Page 26  ---------------------------------- */
