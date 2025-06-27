@@ -2065,6 +2065,20 @@ ul.title3 li::before {
   max-width: 1100px;
 }
 
+.general-illustration div{
+  width: 33% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.general-illustration div > img{
+ width: 100% !important;
+ height: auto !important;
+}
+
+
 /* ----------------------------  Page 26  ---------------------------------- */
 /* Ensure full height for the images */
 .full-img {
@@ -2089,10 +2103,10 @@ ul.title3 li::before {
   height: 80%;
 }
 
-/* Style for each part */
+
 .part-one,
-.part-two {
-  width: 50%;
+.part-two,.part-three {
+  width: 33%;
   /* Makes both parts equal in size */
   display: flex;
   flex-direction: column;
@@ -2111,7 +2125,7 @@ ul.title3 li::before {
 
 }
 
-.part-one1 video {
+.part-three video {
   width: 100%;
   height: auto;
 
@@ -2126,7 +2140,7 @@ ul.title3 li::before {
 /* Styling for text under each image */
 .part-one .text,
 .part-two .text,
-.part-one1 .text {
+.part-three .text {
   text-align: center;
   font-size: 24px;
   color: #000;
