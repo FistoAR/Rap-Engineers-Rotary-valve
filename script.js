@@ -2066,7 +2066,7 @@ const modelViewer = document.querySelector("#rotaryModel");
 const normalBtn = document.querySelector("#normalBtn");
 const explodedBtn = document.querySelector("#explodedBtn");
 const partsBtn = document.querySelector("#partsBtn");
-const hotspots = modelViewer.querySelectorAll(".Hotspot");
+const hotspots = modelViewer.querySelectorAll(".HotspotAnnotation");
 const exploaded = document.querySelectorAll(".exploaded-btn");
 function toggleHotspots(visible) {
   hotspots.forEach(h => {
@@ -2075,7 +2075,7 @@ function toggleHotspots(visible) {
 }
 
 normalBtn.addEventListener("click", () => {
-  $('.label-content').fadeOut();
+  $('.label-content').hide();
   modelViewer.currentTime = 0;
   modelViewer.pause();
   toggleHotspots(false);
@@ -2084,19 +2084,19 @@ normalBtn.addEventListener("click", () => {
 let animationTimeout;
 
 explodedBtn.addEventListener("click", () => {
-  $('.label-content').fadeOut();
+  $('.label-content').hide();
   modelViewer.currentTime = 0;
   modelViewer.play();
   toggleHotspots(false);
   clearTimeout(animationTimeout);
   animationTimeout = setTimeout(() => {
     modelViewer.pause();
-  }, 8000);
+  }, 10950);
 });
 let stopAt8sInterval = null;
 
 partsBtn.addEventListener("click", () => {
-  modelViewer.currentTime = 8;
+  modelViewer.currentTime = 43.95;
   modelViewer.play();
   requestAnimationFrame(() => {
     modelViewer.pause();
@@ -2118,19 +2118,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 const hotspotDescriptions = {
-  'hotspot-2': {
+  'hotspot-1': {
     title: "Housing",
     text: "The body and housing provide structural integrity, ensuring durability and long-term performance."
   },
-  'hotspot-3': {
+  'hotspot-2': {
     title: "End Cover",
     text: "End covers are essential components that protect the internal mechanism and enhance operational safety."
   },
   'hotspot-4': {
-    title: "End Cover",
-    text: "End covers are essential components that protect the internal mechanism and enhance operational safety."
+    title: "Seal",
+    text: "Durable rotary seal preventing leakage in rotating valve shaft systems."
   },
-  'hotspot-5': {
+  'hotspot-3': {
     title: "Rotor",
     text: "The rotor plays a key role in the system, enabling efficient movement and performance optimization."
   }
@@ -2157,7 +2157,7 @@ modelViewer.querySelectorAll(".Hotspot").forEach(button => {
 });
 
 $(document).on('click', '#close-btn', function () {
-  $('.label-content').fadeOut();
+  $('.label-content').hide();
 });
 
 

@@ -38,23 +38,8 @@
   transform: translateY(-50%);
 }
 
-.HotspotAnnotation{
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: rgba(0, 0, 0, 0.8);
-  display: block;
-  font-family: Futura, Helvetica Neue, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  left: calc(100% + 0.5em);
-  max-width: 128px;
-  overflow-wrap: break-word;
-  padding: 0.3em 0.7em;
-  position: absolute;
-  top: 50%;
-  width: max-content;
-}
+
+  
 
 .Hotspot:not([data-visible]) > * {
   opacity: 0;
@@ -151,3 +136,22 @@ model-viewer[ar-status="session-started"] > #ar-prompt {
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 } */
+
+.HotspotAnnotation{
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.8);
+  display: block;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  left: calc(100% + 0.5em);
+  max-width: 128px;
+  overflow-wrap: break-word;
+  padding: 0.20em 0.4em;
+  position: absolute;
+  top: 50%;
+  width: max-content;
+  cursor: pointer;
+}

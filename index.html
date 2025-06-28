@@ -2774,35 +2774,26 @@
           </div>
           <div class="model3d">
             <div class="model">
-              <model-viewer src="./images/2.gltf" disable-ar camera-controls tone-mapping="neutral" poster="poster.webp"
-                shadow-intensity="1" camera-orbit="156.7deg 82.86deg 19.99m" field-of-view="30deg" field-of-view="30deg"
-                min-camera-orbit="auto 78deg auto" max-camera-orbit="auto 78deg auto" environment-image disable-tap>
-                <button class="Hotspot" slot="hotspot-2" data-surface="0 0 186 183 184 0.126 0.281 0.593"
+              <model-viewer src="./images/RotaryExplode.glb" disable-ar camera-controls tone-mapping="neutral"
+                poster="poster.webp" shadow-intensity="1" camera-orbit="-92.55deg 85.95deg 0.2499m" field-of-view="30deg"
+                field-of-view="30deg" min-camera-orbit="auto 78deg auto" max-camera-orbit="auto 78deg auto"
+                environment-image disable-tap id="rotaryModel" disable-pan interaction-prompt="none">
+                <button class="Hotspot" slot="hotspot-1" data-surface="14 0 5777 5775 5779 0.682 0.308 0.010"
                   data-visibility-attribute="visible">
-                  <!-- <div class="HotspotAnnotation">Housing</div> -->
-                </button>
-
-                <button class="Hotspot" slot="hotspot-3" data-surface="18 0 11836 11864 11835 0.226 0.375 0.398"
+                  <div class="HotspotAnnotation">Housing</div>
+                </button><button class="Hotspot" slot="hotspot-2" data-surface="21 0 4734 4639 4660 0.110 0.057 0.833"
                   data-visibility-attribute="visible">
-                  <!-- <div class="HotspotAnnotation">End Cover</div> -->
-                </button>
-
-                <button class="Hotspot" slot="hotspot-4" data-surface="2 0 8307 8326 8325 0.615 0.032 0.353"
+                  <div class="HotspotAnnotation">End Cover
+                  </div>
+                </button><button class="Hotspot" slot="hotspot-3" data-surface="38 0 1244 1243 1245 0.104 0.325 0.571"
                   data-visibility-attribute="visible">
-                  <!-- <div class="HotspotAnnotation">End Cover</div> -->
-                </button>
-
-                <button class="Hotspot" slot="hotspot-5" data-surface="15 0 5013 5015 5016 0.302 0.416 0.282"
+                  <div class="HotspotAnnotation">Rotor
+                  </div>
+                </button><button class="Hotspot" slot="hotspot-4" data-surface="169 0 368 365 369 0.104 0.872 0.024"
                   data-visibility-attribute="visible">
-                  <!-- <div class="HotspotAnnotation">Rotor</div> -->
+                  <div class="HotspotAnnotation">Seal
+                  </div>
                 </button>
-                <!-- <div class="progress-bar hide" slot="progress-bar">
-                          <div class="update-bar"></div>
-                        </div> -->
-
-                <!-- <button slot="ar-button" id="ar-button">
-                          View in your space
-                        </button> -->
               </model-viewer>
 
             </div>
@@ -3924,12 +3915,14 @@
               </div>
               <div class="swiper-slide venting-slide">
                 <div style="width: 100%; height: 100%; display: flex;">
-                  <div style="display: flex; width: 50% !important; height: 100%; justify-content: center; align-items: center;">
+                  <div
+                    style="display: flex; width: 50% !important; height: 100%; justify-content: center; align-items: center;">
                     <video autoplay loop muted style="height: 95%; width: auto;">
                       <source src="./images/VendingAnimation1.webm" type="video/webm" />
                     </video>
                   </div>
-                  <div style="display: flex; width: 50% !important; height: 100%; justify-content: center; align-items: center;">
+                  <div
+                    style="display: flex; width: 50% !important; height: 100%; justify-content: center; align-items: center;">
                     <video autoplay loop muted style="height: 95%; width: auto;">
                       <source src="./images/VendingAnimation2.webm" type="video/webm" />
                     </video>
