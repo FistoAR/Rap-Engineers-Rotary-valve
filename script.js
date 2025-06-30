@@ -250,15 +250,15 @@ function updatePageNumber() {
   }
 
 
-  // const left58 = document.querySelector(".text58");
-  // const right58 = document.querySelector(".img58");
-  // if (currentSlide + 1 === 57) {
-  //   left58.classList.add("animate-part-one");
-  //   right58.classList.add("animate-part-two");
-  // } else {
-  //   left58.classList.remove("animate-part-one");
-  //   right58.classList.remove("animate-part-two");
-  // }
+  const thank = document.getElementById("than");
+  const you = document.getElementById("you");
+  if (currentSlide + 1 === 57) {
+    thank.classList.add("animate-part-one");
+    you.classList.add("animate-part-two");
+  } else {
+    thank.classList.remove("animate-part-one");
+    you.classList.remove("animate-part-two");
+  }
 
 
   // const videocontainer55 = document.querySelector(".video-container55");
