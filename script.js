@@ -2103,12 +2103,12 @@ explodedBtn.addEventListener("click", () => {
   clearTimeout(animationTimeout);
   animationTimeout = setTimeout(() => {
     modelViewer.pause();
-  }, 10950);
+  }, 10980);
 });
 let stopAt8sInterval = null;
 
 partsBtn.addEventListener("click", () => {
-  modelViewer.currentTime = 43.95;
+  modelViewer.currentTime = 10.98;
   modelViewer.play();
   requestAnimationFrame(() => {
     modelViewer.pause();
