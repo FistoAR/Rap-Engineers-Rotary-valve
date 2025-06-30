@@ -40,7 +40,8 @@ html {
 .homeIntent,
 .groupOfCopmaniesIntent,
 .pneumaticIntent,
-.productIntent {
+.productIntent,
+.globalPartners {
   cursor: pointer;
 }
 
@@ -12161,7 +12162,7 @@ td strong {
 
 
 .faq-scroll-view {
-  max-height: 350px;
+  max-height: 450px;
   width: 80%;
   display: grid;
   overflow-y: auto;
@@ -12171,6 +12172,23 @@ td strong {
   /* background: #f9f9f9; */
   /* margin-top:5px; */
   /* box-sha5ow: 0 2px 10px rgba(0,0,0,0.1); */
+}
+
+.faq-scroll-view::-webkit-scrollbar {
+  width: 9px;
+  height:100px;
+}
+
+.faq-scroll-view::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.faq-scroll-view::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000000;
+  animation: glowScroll 2s infinite linear;
 }
 
 .faq-item {
@@ -12261,6 +12279,24 @@ td strong {
   color: #080000;
   font-family: 'Segoe UI', sans-serif;
 }
+
+.valve-guide::-webkit-scrollbar {
+  width: 9px;
+  height:100px;
+}
+
+.valve-guide::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.valve-guide::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000000;
+  animation: glowScroll 2s infinite linear;
+}
+
 
 .valve-guide h2 {
   color: #1B7AC8;

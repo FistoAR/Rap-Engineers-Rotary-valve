@@ -370,7 +370,7 @@ function updatePageNumber() {
 
   const bgAudio = document.getElementById('bg-audio');
   const machineVideo = document.getElementById('autoPlayVideo');
-const machineVideo1 = document.getElementById('autoPlayVideo1');
+  const machineVideo1 = document.getElementById('autoPlayVideo1');
   if (currentSlide + 1 === 38) {
     setTimeout(() => {
       machineVideo.currentTime = 0;
@@ -680,9 +680,9 @@ function addRotaryValveAnimation() {
   });
 
   lists.forEach((item, index) => {
-  setTimeout(() => {
-    item.classList.add('fade-in-up');
-  }, 200 * index); 
+    setTimeout(() => {
+      item.classList.add('fade-in-up');
+    }, 200 * index);
   });
 
 }
@@ -759,7 +759,8 @@ function updateSlider() {
     $('.homeIntent').css("color", "red");
   } else if (currentSlide >= 2 && currentSlide <= 12) {
     $('.groupOfCopmaniesIntent').css("color", "red");
-
+  }else if (currentSlide >= 13 && currentSlide <= 23) {
+    $('.globalPartners').css("color", "red");
   } else if (currentSlide >= 24 && currentSlide <= 29) {
     $('.pneumaticIntent').css("color", "red");
   } else if (currentSlide >= 30 && currentSlide <= 68) {
@@ -1129,6 +1130,7 @@ const homeIntentButton = document.querySelectorAll('.homeIntent');
 const groupOfCopmaniesIntentButton = document.querySelectorAll('.groupOfCopmaniesIntent');
 const pneumaticIntentButton = document.querySelectorAll('.pneumaticIntent');
 const productIntentButton = document.querySelectorAll('.productIntent');
+const globalPartners = document.querySelectorAll('.globalPartners');
 
 homeIntentButton.forEach(button => {
   button.addEventListener("click", function () {
@@ -1142,6 +1144,14 @@ groupOfCopmaniesIntentButton.forEach(button => {
   button.addEventListener("click", function () {
     $('#prevButton').show();
     pageInput.value = 3;
+    triggerPageChange();
+  });
+})
+
+globalPartners.forEach(button => {
+  button.addEventListener("click", function () {
+    $('#prevButton').show();
+    pageInput.value = 14;
     triggerPageChange();
   });
 })
@@ -1374,6 +1384,8 @@ document.addEventListener("DOMContentLoaded", () => {
         $('.pneumaticIntent').css("color", "red");
       } else if (this.classList.contains("productIntent")) {
         $('.productIntent').css("color", "red");
+      }else if (this.classList.contains("globalPartners")) {
+        $('.globalPartners').css("color", "red");
       }
     });
   });
