@@ -26,6 +26,7 @@ function updatePageNumber() {
   } else if (currentSlide + 1 === 53) {
     startThirdPageAnmations7();
   } else if (currentSlide + 1 === 35) {
+    audioPlayer.pause();
     startThirdPageAnmations10();
   } else if (currentSlide + 1 === 36) {
     startThirdPageAnmations11();
@@ -67,6 +68,7 @@ function updatePageNumber() {
   }
 
   if (currentSlide + 1 == 33) {
+      audioPlayer.pause();
     addRotaryValveAnimation()
   } else {
     removeRotaryValveAnimation()
@@ -2080,6 +2082,12 @@ const explodedBtn = document.querySelector("#explodedBtn");
 const partsBtn = document.querySelector("#partsBtn");
 const hotspots = modelViewer.querySelectorAll(".HotspotAnnotation");
 const exploaded = document.querySelectorAll(".exploaded-btn");
+
+const descriptionEl = document.getElementById("hotspotDescription");
+const titleEl = document.getElementById("hotspotTitle");
+const audioPlayer = new Audio();
+
+
 function toggleHotspots(visible) {
   hotspots.forEach(h => {
     h.style.display = visible ? 'inline' : 'none';
@@ -2088,6 +2096,7 @@ function toggleHotspots(visible) {
 
 normalBtn.addEventListener("click", () => {
   $('.label-content').hide();
+  audioPlayer.pause();
   modelViewer.currentTime = 0;
   modelViewer.pause();
   toggleHotspots(false);
@@ -2097,6 +2106,7 @@ let animationTimeout;
 
 explodedBtn.addEventListener("click", () => {
   $('.label-content').hide();
+  audioPlayer.pause();
   modelViewer.currentTime = 0;
   modelViewer.play();
   toggleHotspots(false);
@@ -2126,38 +2136,45 @@ exploaded.forEach(btn => btn.addEventListener('click', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   toggleHotspots(false);
-});
-
-
-const hotspotDescriptions = {
+});const hotspotDescriptions = {
   'hotspot-1': {
     title: "Housing",
-    text: "The body and housing provide structural integrity, ensuring durability and long-term performance."
+    text: "The body and housing provide structural integrity, ensuring durability and long-term performance.",
+    audio: "./audio/Model Voice/hotspot1.mp3"
   },
   'hotspot-2': {
     title: "End Cover",
-    text: "End covers are essential components that protect the internal mechanism and enhance operational safety."
-  },
-  'hotspot-4': {
-    title: "Seal",
-    text: "Durable rotary seal preventing leakage in rotating valve shaft systems."
+    text: "End covers are essential components that protect the internal mechanism and enhance operational safety.",
+    audio: "./audio/Model Voice/hotspot2.mp3"
   },
   'hotspot-3': {
     title: "Rotor",
-    text: "The rotor plays a key role in the system, enabling efficient movement and performance optimization."
+    text: "The rotor plays a key role in the system, enabling efficient movement and performance optimization.",
+    audio: "./audio/Model Voice/hotspot4.mp3"
+  },
+  'hotspot-4': {
+    title: "Seal",
+    text: "Durable rotary seal preventing leakage in rotating valve shaft systems.",
+    audio: "./audio/Model Voice/hotspot3.mp3"
   }
 };
 
-const descriptionEl = document.getElementById("hotspotDescription");
-const titleEl = document.getElementById("hotspotTitle");
+
 
 modelViewer.querySelectorAll(".Hotspot").forEach(button => {
   button.addEventListener("click", () => {
     $('.label-content').fadeIn();
+
     const slotName = button.getAttribute("slot");
-    const content = hotspotDescriptions[slotName] || { title: "", text: "" };
-    descriptionEl.classList.remove("show");
+    const content = hotspotDescriptions[slotName] || { title: "", text: "", audio: "" };
+
+
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+
+
     titleEl.classList.remove("show");
+    descriptionEl.classList.remove("show");
     void descriptionEl.offsetWidth;
 
     titleEl.textContent = content.title;
@@ -2165,11 +2182,54 @@ modelViewer.querySelectorAll(".Hotspot").forEach(button => {
 
     titleEl.classList.add("show");
     descriptionEl.classList.add("show");
+
+
+    if (content.audio) {
+      audioPlayer.src = content.audio;
+      audioPlayer.play();
+    }
   });
 });
 
 $(document).on('click', '#close-btn', function () {
   $('.label-content').hide();
+  audioPlayer.pause();
 });
 
 
+(() => {
+ 
+   const cursor = document.querySelector('.cursor');
+ 
+   document.addEventListener('mousemove', e => {
+      cursor.setAttribute('style', `top:  ${e.pageY - 25}px; left: ${e.pageX - 25}px;`);
+   });
+ 
+   document.addEventListener('click', () => { 
+      console.log("%c Click...!!!", "font-size: 20px; color:mediumspringgreen;");
+ 
+      cursor.classList.add('cursor--expand');
+      console.log(cursor.classList);
+   
+      setTimeout(() => {
+         cursor.classList.remove('cursor--expand');
+      }, 500);
+   });
+})();
+ 
+
+document.querySelectorAll(".page44leftcon").forEach(el => {
+  el.addEventListener("wheel", function (e) {
+    const isScrollable = el.scrollHeight > el.clientHeight;
+    const isScrollingDown = e.deltaY > 0;
+    const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight;
+    const atTop = el.scrollTop === 0;
+
+    if (
+      (isScrollingDown && !atBottom) ||
+      (!isScrollingDown && !atTop)
+    ) {
+      e.stopPropagation(); 
+    }
+  }, { passive: false });
+});
